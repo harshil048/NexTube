@@ -1,8 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../helpers/axiosInstance";
 import toast from "react-hot-toast";
-import { BASE_URL } from "../../../constant";
-
+import { BASE_URL } from "../../constants";
 
 const initialState = {
   loading: false,
@@ -32,6 +31,7 @@ export const getAllVideos = createAsyncThunk(
       }
 
       const response = await axiosInstance.get(url);
+
       return response.data.data;
     } catch (error) {
       toast.error(error?.response?.data?.error);
@@ -140,10 +140,8 @@ const videoSlice = createSlice({
     });
     builder.addCase(getAllVideos.fulfilled, (state, action) => {
       state.loading = false;
-      if (action.payload && action.payload.docs) {
-        state.videos.docs = [...state.videos.docs, ...action.payload.docs];
-        state.videos.hasNextPage = action.payload.hasNextPage || false;
-      }
+      state.videos.docs = [...state.videos.docs, ...action.payload.docs];
+      state.videos.hasNextPage = action.payload.hasNextPage;
     });
     builder.addCase(publishAvideo.pending, (state) => {
       state.uploading = true;
