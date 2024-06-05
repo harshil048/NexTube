@@ -18,7 +18,9 @@ app.use(express.static("public"));
 app.use(cookieParser());
 app.use(morgan("dev")); //HTTP request logger middleware for node.js 
 
-
+app.use("/", (req, res) => {
+  res.send({ message: "Welcome to youtube-twitter" });
+});
 
 //routes import
 
