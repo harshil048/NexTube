@@ -4,7 +4,6 @@ import { deleteVideo, getAllVideos, getVideoById, publishAVideo, togglePublishSt
 import { upload } from '../middlewares/multer.middleware.js';
 
 const router = Router();
-router.use(verifyJWT);
 
 router
   .route("/")
