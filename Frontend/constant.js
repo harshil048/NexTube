@@ -1,1 +1,1 @@
-export const BASE_URL = "https://video-tube-api-zeta.vercel.app";
+export const BASE_URL = "https://video-tube-api-zeta.vercel.app/api/v1";
