@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axiosInstance from "../../helpers/axiosInstance";
 import toast from "react-hot-toast";
-import { BASE_URL } from "../../constants.js";
+import { BASE_URL } from "../../constant";
 
 const initialState = {
   loading: false,
