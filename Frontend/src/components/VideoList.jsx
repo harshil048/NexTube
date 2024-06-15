@@ -26,7 +26,10 @@ function VideoList({
         onClick={() => navigate(`/watch/${videoId}`)}
       >
         <div className="relative sm:h-60 h-48">
-          <img src={thumbnail} className="object-cover w-full h-full" />
+          <img
+            src={thumbnail}
+            className="object-cover w-full h-full rounded-lg"
+          />
           <span className="absolute bottom-2 right-2 rounded-lg text-sm bg-black py-1 px-2">
             {formatDuration(duration)}
           </span>
@@ -36,17 +39,17 @@ function VideoList({
             <div onClick={handleAvatarClick}>
               <img
                 src={avatar}
-                className="w-10 h-10 rounded-full object-cover border border-slate-700"
+                className="w-11 h-11 mr-2 rounded-full object-cover border border-slate-700"
               />
             </div>
           )}
           <div>
-            <h2 className="font-medium">{title}</h2>
-            <div className="text-xs space-x-1 text-slate-400">
+            <h2 className="font-medium text-xl">{title}</h2>
+            <div className="text-sm space-x-1 text-slate-400">
               <span>{views} Views</span> .<span>{timeAgo(createdAt)}</span>
             </div>
             {channelName && (
-              <h2 className="text-xs space-x-1 text-slate-200">
+              <h2 className="text-sm space-x-1 text-slate-200">
                 {channelName}
               </h2>
             )}

@@ -21,7 +21,7 @@ function GetImagePreview({
   };
   return (
     <>
-      <div className="w-full">
+      <div className="w-full rounded-lg">
         <label
           htmlFor={name}
           className="cursor-pointer relative flex flex-col justify-center items-start"

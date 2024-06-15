@@ -37,7 +37,7 @@ function Login() {
   return (
     <>
       <div className="w-full h-screen text-white p-3 flex justify-center items-start">
-        <div className="flex max-w-5xl flex-col space-y-5 justify-center items-center border border-slate-600 p-3 mt-20">
+        <div className="flex max-w-5xl flex-col space-y-5 justify-center items-center border border-slate-600 py-6 px-3 rounded-md my-20">
           <div className="flex items-center gap-2 mt-5">
             <Logo />
           </div>
@@ -57,7 +57,7 @@ function Login() {
             <Input
               label="Password: "
               type="password"
-              placeholder="1kd074fjw0"
+              placeholder="password"
               {...register("password", {
                 required: "password is required",
               })}
@@ -67,7 +67,7 @@ function Login() {
             <Button
               type="submit"
               bgColor="bg-purple-500"
-              className="w-full sm:py-3 py-2 hover:bg-purple-700 text-lg"
+              className="w-[23rem] rounded-md py-2  hover:bg-purple-700 text-lg"
             >
               Login
             </Button>

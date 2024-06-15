@@ -49,12 +49,12 @@ function SignUp() {
             onSubmit={handleSubmit(submit)}
             className="space-y-4 p-2 text-sm sm:w-96 w-full"
           >
-            <div className="w-full relative h-28 bg-[#222222]">
-              <div className="w-full h-full">
+            <div className="w-full relative h-28 bg-[#222222] rounded-lg">
+              <div className="w-full h-full ">
                 <GetImagePreview
                   name="coverImage"
                   control={control}
-                  className="w-full h-28 object-cover border-none border-slate-900"
+                  className="w-full h-28 rounded-lg object-cover border-none border-slate-900"
                   cameraIcon
                 />
                 <div className="text-sm absolute right-2 bottom-2 hover:text-purple-500 cursor-default">
@@ -126,7 +126,7 @@ function SignUp() {
             <Button
               type="submit"
               bgColor="bg-purple-500"
-              className="w-full sm:py-3 py-2 hover:bg-purple-700 text-lg"
+              className="w-full rounded-md py-2 hover:bg-purple-700 text-lg"
             >
               Signup
             </Button>
