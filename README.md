@@ -2,7 +2,11 @@
 # NexTube
 
 ## Overview
-NexTube is a YouTube clone featuring secure account management, video uploads, user interactions, comment management, subscription handling, and personalized playlists.
+NexTube is a YouTube clone featuring secure account management, video uploads, user interactions, comment management, subscription handling, and personalized playlists. 
+
+## Live Demo
+
+Check out the live demo of the NexTube [here](https://video-tube-frontend-harshil-bambhroliyas-projects.vercel.app/).
 
 ## Features
 
