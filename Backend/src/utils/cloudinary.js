@@ -16,7 +16,7 @@ const uploadOnCloudinary = async (localFilePath) => {
       image_metadata: true
     })
     console.log("Upload successful on Cloudinary");
-    fs.unlinkSync(localFilePath);
+    // fs.unlinkSync(localFilePath);
 
     return response;
 
